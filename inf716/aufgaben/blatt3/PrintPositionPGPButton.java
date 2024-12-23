@@ -1,10 +1,14 @@
+import java.awt.Point;
+
 public class PrintPositionPGPButton extends PGPButton {
     public PrintPositionPGPButton(String label) {
-        // ToDo
+        super(label);
     }
 
     @Override
     public void click() {
-        // ToDo
+        String message = "I'm the button at (%d, %d)";
+        Point location = this.getLocation();
+        System.out.println(String.format(message, location.x, location.y));
     }
 }

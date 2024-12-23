@@ -1,10 +1,19 @@
+import java.util.Random;
+import java.awt.Color;
+
 public class RecolorPGPButton extends PGPButton {
     public RecolorPGPButton(String label) {
-        // ToDo
+        super(label);
     }
 
     @Override
     public void click() {
-        // ToDo
+        Random rnd = new Random();
+        float red = rnd.nextFloat();
+        float green = rnd.nextFloat();
+        float blue = rnd.nextFloat();
+        Color newColor = new Color(red, green, blue);
+
+        this.setBackground(newColor);
     }
 }
